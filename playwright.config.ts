@@ -18,10 +18,9 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['html', { outputFolder: 'playwright/playwright-report' }],
-    ['list'],
     ['github'],
-    ['json', { outputFile: 'playwright-report/results.json' }] // Saves test timings for analysis
+    ['list'],
+    ['html'],
   ],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
