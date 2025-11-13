@@ -20,6 +20,7 @@ export default defineConfig({
   reporter: [
     ['html', { outputFolder: 'playwright/playwright-report' }],
     ['list'],
+    ['github'],
     ['json', { outputFile: 'playwright-report/results.json' }] // Saves test timings for analysis
   ],
   use: {
