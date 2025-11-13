@@ -20,7 +20,7 @@ export default defineConfig({
   reporter: [
     ['github'],
     ['list'],
-    ['html'],
+    ['html', { outputFolder: 'playwright/playwright-report' }],
   ],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',

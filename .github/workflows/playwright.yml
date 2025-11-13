@@ -26,8 +26,8 @@ jobs:
       run: npx playwright test
       env:
         CI: true
-        PLAYWRIGHT_FORCE_TTY: 1
-        FORCE_COLOR: 1
+        PLAYWRIGHT_FORCE_TTY: true
+        FORCE_COLOR: true
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
